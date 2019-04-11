@@ -1,4 +1,4 @@
-ARG REGISTRY=${ARTIFACTORY}
+ARG REGISTRY
 FROM ${REGISTRY}node:10
 
 COPY ${HOME:-.}/.npmrc /root/.npmrc
