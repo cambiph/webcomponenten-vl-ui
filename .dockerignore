@@ -6,6 +6,5 @@ doc
 .gitignore
 analysis.json
 build.Dockerfile
-docker-compose.yml
 package-lock.json
 release.Dockerfile

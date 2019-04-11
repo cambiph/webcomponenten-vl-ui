@@ -1,4 +1,5 @@
-FROM artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/node:10
+ARG REGISTRY=${ARTIFACTORY}
+FROM ${REGISTRY}node:10
 
 COPY ${HOME:-.}/.npmrc /root/.npmrc
 COPY ./package.json /app/package.json
