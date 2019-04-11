@@ -1,4 +1,4 @@
-FROM ${DOCKER_REGISTRY}node:10
+FROM http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/node:10
 
 COPY ${HOME:-.}/.npmrc /root/.npmrc
 COPY ./package.json /app/package.json
@@ -6,8 +6,7 @@ COPY ./package.json /app/package.json
 WORKDIR /app
 
 RUN npm install
-RUN rm -rf /root/.npmrc
 
 COPY . .
 
-ENTRYPOINT [ "npm", "run", "package" ]
+ENTRYPOINT [ "npm", "run", "package"]
