@@ -7,7 +7,7 @@ COPY ${HOME:-.}/.npmrc /root/.npmrc
 COPY ${HOME:-.}/.gitconfig /root/.gitconfig
 COPY ${HOME:-.}/.git-credentials /root/.git-credentials
 
-COPY ./package.json /app/package.json
+COPY . /app/
 
 WORKDIR /app
 
