@@ -1,10 +1,7 @@
-FROM ${ARTIFACTORY}node:10
+ARG bamboo_docker_registry
+FROM ${bamboo_docker_registry}node:10
 
 ARG VERSION
-
-ENV HTTP_PROXY ${http_proxy}
-ENV HTTPS_PROXY ${https_proxy}
-ENV NO_PROXY ${no_proxy}
 
 COPY ${HOME:-.}/.npmrc /root/.npmrc
 COPY ${HOME:-.}/.gitconfig /root/.gitconfig
