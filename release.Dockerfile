@@ -1,5 +1,5 @@
 ARG bamboo_docker_registry
-FROM ${bamboo_docker_registry}node:10
+FROM ${bamboo_docker_registry}/node:10
 
 ARG VERSION
 
